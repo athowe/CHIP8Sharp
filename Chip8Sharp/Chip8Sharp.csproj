@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90136A2C-03A3-4E1E-84BA-0499BFCF5E67}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Chip8Sharp</RootNamespace>
+    <AssemblyName>Chip8Sharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\CPU\Chip8CPU.cs" />
+    <Compile Include="System\CPU\Chip8Memory.cs" />
+    <Compile Include="Chip8Computer.cs" />
+    <Compile Include="System\CPU\Chip8OnScreenGraphics.cs" />
+    <Compile Include="System\CPU\Chip8Timer.cs" />
+    <Compile Include="System\CPU\Chip8Stack.cs" />
+    <Compile Include="System\CPU\Chip8SimpleCPURegister.cs" />
+    <Compile Include="System\CPU\Chip8Opcode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\" />
+    <Folder Include="System\CPU\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="REAMDE.md" />
+    <None Include="LICENSE" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>
