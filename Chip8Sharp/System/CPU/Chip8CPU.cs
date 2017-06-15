@@ -45,7 +45,7 @@ namespace Chip8Sharp.System.CPU
             return OpCode.GetOpcode();
         }
 
-        public byte GetMemory(int memoryAddresss)
+        public byte GetMemory(int memoryAddress)
         {
             return Memory.GetAddress(memoryAddress);
         }
